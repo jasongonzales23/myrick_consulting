@@ -2,7 +2,7 @@
 title: Index
 listed: false
 published: true
-redirect_url: "/home"
+# redirect_url: "/home"
 ---
 !!!
 /[if lt IE 7 ] <html class="ie ie6" lang="en">
@@ -15,7 +15,8 @@ redirect_url: "/home"
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
     %title {{site.name}}
-    %link{:href => "images/favicons/favicon.ico", :rel => "icon"}/
+    //TODO create favicon
+    //%link{:href => "images/favicons/favicon.ico", :rel => "icon"}/
     %link{:href => "images/favicons/apple-touch-icon.png", :rel => "apple-touch-icon"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", :rel => "stylesheet"}/
@@ -79,15 +80,16 @@ redirect_url: "/home"
         .section-background
           / IMAGE BACKGROUND
           .section-background-image.parallax{"data-stellar-ratio" => "0.4"}
-            %img{:alt => "", :src => "images/backgrounds/hero-bg-fullscreen-cta.jpg", :style => "opacity: 0.3;"}
+            %img{:alt => "", :src => "images/backgrounds/section1_background.jpg", :style => "opacity: .7;"}
         .container
           .hero-content
             .hero-content-inner
               .row
                 .col-md-10.col-md-offset-1
                   .hero-heading.text-center{"data-animation" => "fadeIn"}
-                    %h1.hero-title All in One Template
-                    %p.hero-tagline A robust Landing Page Template which solves all your landing page needs
+                    %h1.hero-title
+                      {{ 'logos/myrick_logo_white.png' | theme_image_tag }}
+                    %p.hero-tagline Where Ideas Come to Life
                   %p.hero-buttons.text-center
                     %a.btn.btn-lg.btn-default{:href => "#about"} Learn More
                     %a.btn.btn-lg.btn-primary{:href => "https://wrapbootstrap.com/theme/drew-all-in-one-marketing-landing-page-WB0350PTJ"} Buy This Template
@@ -101,34 +103,31 @@ redirect_url: "/home"
           .row
             .col-md-10.col-md-offset-1
               %p.headline-text
-                Designed with the best practices,
-                %strong DREW
-                is a premium landing page template which cares much about design quality, functions, and the most important - your successful marketing campaign.
+                Status quo doesn't work for us. Going above and beyond for our
+                customers is not just a saying; it's the way we live. Our
+                mission is to provide the most memorable experience for our
+                customers and theirs.
       / DESCRIPTION
       %section#about.about-section.section
         .container
-          %h2.section-heading.text-center About Drew
+          %h2.section-heading.text-center About Myrick Consulting
           .about-row.row
             / DESCRIPTION IMAGE
             .about-image.col-md-6{"data-animation" => "fadeIn"}
-              %img{:alt => "Description Image", :src => "images/contents/about.jpg"}/
+              %img{:alt => "Description Image", :src => "images/contents/about_image.jpg"}/
             / DESCRIPTION TEXT
             .about-text.col-md-6
-              %p.lead Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
-              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat arcu ut orci porta, eget porttitor felis suscipit. Sed a nisl ullamcorper, tempus augue at, rutrum lacus. Duis et turpis eros. Duis ex metus, facilisis nec porta non, accumsan vel turpis. Proin euismod, sem a mollis vestibulum, ligula elit faucibus erat, in dignissim sapien leo eget quam.
-              %ul.icon-list
-                %li
-                  %span.icon-list-icon.fa.fa-hand-o-up{"data-animation" => "bounceIn"}
-                  %h4.icon-list-title Click Through
-                  %p Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-                %li
-                  %span.icon-list-icon.fa.fa-heart-o{"data-animation" => "bounceIn"}
-                  %h4.icon-list-title Lead Generation
-                  %p Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-                %li
-                  %span.icon-list-icon.fa.fa-lightbulb-o{"data-animation" => "bounceIn"}
-                  %h4.icon-list-title Other Purposes
-                  %p Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+              %p.lead 
+                We are quality and customer centric enabling us to build great
+                relationships with our customers and within our community.
+              %p
+                Myrick Consulting is an advertising company that specializes in
+                print and digital advertising. We Partner with businesses to
+                develop, execute, manage, and analyze your advertising
+                campaigns. Myrick provides quality print products, digital
+                advertising, websites, hosting and may other services. We are
+                quality and customer centric enabling us to build great
+                relationships with our customers and within our community.
       / BENEFITS
       %section#benefits.benefits-section.section-gray.section
         .container
