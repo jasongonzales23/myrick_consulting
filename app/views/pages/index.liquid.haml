@@ -2,7 +2,6 @@
 title: Index
 listed: false
 published: true
-# redirect_url: "/home"
 ---
 !!!
 /[if lt IE 7 ] <html class="ie ie6" lang="en">
@@ -51,30 +50,14 @@ published: true
               %li
                 %a{:href => "#about"} About
               %li
-                %a{:href => "#benefits"} Benefits
+                %a{:href => "#benefits"} Products
               %li
                 %a{:href => "#how-it-works"} How it Works
               %li
-                %a{:href => "#team"} The Team
-              %li
-                %a{:href => "#pricing"} Pricing
-              / DROPDOWN MENU
-              %li.dropdown.dropdown-hover
-                %a.dropdown-toggle.external{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-                  More
-                  %span.caret
-                %ul.dropdown-menu{:role => "menu"}
-                  %li
-                    %a.anchor-link.external{:href => "#portfolio"} Portfolio
-                  %li
-                    %a.anchor-link.external{:href => "#testimonial"} Testimonial
-                  %li
-                    %a.anchor-link.external{:href => "#faq"} FAQ
-                  %li
-                    %a.anchor-link.external{:href => "#maps"} Contact Us
+                %a{:href => "#testimonial-slider"} Testimonial
               / HEADER ACTION BUTTON
               %li.header-action-button
-                %a.btn.btn-primary{:href => "#"} Action Button
+                %a.btn.btn-primary{:href => "#contact-maps"} Contact Us
       / HERO
       %section#hero.hero-section.hero-layout-simple.hero-fullscreen.section.section-dark
         .section-background
@@ -128,50 +111,66 @@ published: true
                 advertising, websites, hosting and may other services. We are
                 quality and customer centric enabling us to build great
                 relationships with our customers and within our community.
-      / BENEFITS
+      / Products
       %section#benefits.benefits-section.section-gray.section
         .container
-          %h2.section-heading.text-center The Benefits
+          %h2.section-heading.text-center Products
           .benefits-row.row
             / BENEFIT 1
             .col-sm-6.col-md-4
               .benefit
-                %span.benefit-icon.fa.fa-bicycle{"data-animation" => "bounceIn"}
-                %h4.benefit-title Built with Bootstrap 3.3
-                %p.benefit-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
+                %span.benefit-icon.fa.fa-area-chart{"data-animation" => "bounceIn"}
+                %h4.benefit-title Marketing Strategy/Analysis
+                %p.benefit-description
+                  Quality strategies with unparalleled analysis! Campaigns are
+                  only as good as the data it generates, and how you read and
+                  react to it. This is where Myrick excels.
             / BENEFIT 2
             .col-sm-6.col-md-4
               .benefit
-                %span.benefit-icon.fa.fa-code{"data-animation" => "bounceIn"}
-                %h4.benefit-title Quick & Easy Setup
-                %p.benefit-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
+                %span.benefit-icon.fa.fa-laptop{"data-animation" => "bounceIn"}
+                %h4.benefit-title Websites
+                %p.benefit-description
+                  Modern designs with easy to maintain CMS's for lower
+                  maintenance costs. Sites built with optimization in mind.
             .hidden-md.hidden-lg.clear
             / BENEFIT 3
             .col-sm-6.col-md-4
               .benefit
-                %span.benefit-icon.fa.fa-eye{"data-animation" => "bounceIn"}
-                %h4.benefit-title Responsive & Retina Ready
-                %p.benefit-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
+                %span.benefit-icon.fa.fa-print{"data-animation" => "bounceIn"}
+                %h4.benefit-title Print
+                %p.benefit-description
+                  From business cards to 25' banners and everything in between.
+                  Producing mail campaigns, brochures, presentation folders and
+                  more all while using the most high quality printing
+                  practices.
             .hidden-sm.clear
             / BENEFIT 4
             .col-sm-6.col-md-4
               .benefit
-                %span.benefit-icon.fa.fa-smile-o{"data-animation" => "bounceIn"}
-                %h4.benefit-title Clean Codes & Documentation
-                %p.benefit-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
+                %span.benefit-icon.fa.fa-rocket{"data-animation" => "bounceIn"}
+                %h4.benefit-title SEO
+                %p.benefit-description
+                  Our SEO & PPC department work hand and hand with our website
+                  department so you can hit the ground running. We use best
+                  practices from Google, and are Google certified.
             .hidden-md.hidden-lg.clear
             / BENEFIT 5
             .col-sm-6.col-md-4
               .benefit
-                %span.benefit-icon.fa.fa-pagelines{"data-animation" => "bounceIn"}
-                %h4.benefit-title Optimized for Performance
-                %p.benefit-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
+                %span.benefit-icon.fa.fa-crop{"data-animation" => "bounceIn"}
+                %h4.benefit-title Graphic Design
+                %p.benefit-description
+                  Design in a way to draw attention and invoke a quality response or lead!
             / BENEFIT 6
             .col-sm-6.col-md-4
               .benefit
-                %span.benefit-icon.fa.fa-paperclip{"data-animation" => "bounceIn"}
-                %h4.benefit-title Fit for Any Purposes
-                %p.benefit-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
+                %span.benefit-icon.fa.fa-hand-o-up{"data-animation" => "bounceIn"}
+                %h4.benefit-title Digital Advertising
+                %p.benefit-description
+                  Re-Targeting, Digital Display, and IP Targeting! Narrow your
+                  demographic by using one or many of the 750 plus different
+                  household criteria you can choose from.
       / HOW IT WORKS
       %section#how-it-works.how-it-works-section.section
         .container-fluid
@@ -180,207 +179,37 @@ published: true
             / HOW IT WORKS - ITEM 1
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
               .hiw-item
-                %img.hiw-item-picture{:alt => "", :src => "images/contents/hiw-item-1.jpg"}/
+                %img.hiw-item-picture{:alt => "", :src => "images/contents/step-1.jpg"}/
                 .hiw-item-text
                   %span.hiw-item-icon 1
-                  %h4.hiw-item-title Choose a Layout
-                  %p.hiw-item-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
+                  %h4.hiw-item-title Contact Myrick
+                  %p.hiw-item-description Call us, Tweet at us, post on our (FB Logo here)! Just reach out any way you can so we can get started Contact Us button (Directs down the page to the form) Call 800-571-1957 Email button 
+
             / HOW IT WORKS - ITEM 2
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
               .hiw-item.even
-                %img.hiw-item-picture{:alt => "", :src => "images/contents/hiw-item-2.jpg"}/
+                %img.hiw-item-picture{:alt => "", :src => "images/contents/step-2.jpg"}/
                 .hiw-item-text
                   %span.hiw-item-icon 2
-                  %h4.hiw-item-title Edit & Customize
-                  %p.hiw-item-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
+                  %h4.hiw-item-title Research & Strategize
+                  %p.hiw-item-description We research your primary and secondary demographic, and then develop the strategy and message to reach them.
             .hidden-md.hidden-lg.clear
             / HOW IT WORKS - ITEM 3
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
               .hiw-item
-                %img.hiw-item-picture{:alt => "", :src => "images/contents/hiw-item-3.jpg"}/
+                %img.hiw-item-picture{:alt => "", :src => "images/contents/step-3.jpg"}/
                 .hiw-item-text
                   %span.hiw-item-icon 3
-                  %h4.hiw-item-title Upload to Hosting
-                  %p.hiw-item-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
+                  %h4.hiw-item-title Execute & Manage 
+                  %p.hiw-item-description Execute & manage the campaign. Adjusting the campaign if necessary based on the analytics is something Myrick prides itself on.
             / HOW IT WORKS - ITEM 4
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
               .hiw-item.even
-                %img.hiw-item-picture{:alt => "", :src => "images/contents/hiw-item-4.jpg"}/
+                %img.hiw-item-picture{:alt => "", :src => "images/contents/step-4.jpg"}/
                 .hiw-item-text
                   %span.hiw-item-icon 4
-                  %h4.hiw-item-title Finished!
-                  %p.hiw-item-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
-      / NUMBERS
-      %section#numbers.numbers-section.section-dark.section
-        .section-background
-          / IMAGE BACKGROUND
-          .section-background-image.parallax{"data-stellar-ratio" => "0.4"}
-            %img{:src => "images/backgrounds/numbers-bg.jpg", :style => "opacity: 0.2;"}/
-        .container
-          %h2.section-heading.text-center Drew in Numbers
-          .numbers-row.row
-            / NUMBERS - ITEM 1
-            .col-sm-6.col-md-3
-              .numbers-item
-                .numbers-item-counter
-                  %span.counter-up 1,269
-                .numbers-item-caption Tickets solved
-            / NUMBERS - ITEM 2
-            .col-sm-6.col-md-3
-              .numbers-item
-                .numbers-item-counter
-                  %span.counter-up> 99.8
-                  \%
-                .numbers-item-caption User Ratings
-            / NUMBERS - ITEM 3
-            .col-sm-6.col-md-3
-              .numbers-item
-                .numbers-item-counter
-                  %span.counter-up> 754
-                  k
-                .numbers-item-caption Total Users
-            / NUMBERS - ITEM 4
-            .col-sm-6.col-md-3
-              .numbers-item
-                .numbers-item-counter
-                  %span.counter-up 358
-                  %span.fa.fa-coffee
-                .numbers-item-caption Coffee Served
-      / TEAM
-      %section#team.team-section.section
-        .container-fluid
-          %h2.section-heading.text-center Meet The Experts
-          .team-row.row
-            / TEAM MEMBER 1
-            .col-sm-6.col-md-4.col-lg-2{"data-animation" => "fadeIn"}
-              .team-member
-                %img.team-member-picture{:alt => "", :src => "images/contents/team-member-1.jpg"}/
-                .team-member-text
-                  %h4.team-member-name Jason Castillo
-                  .team-member-position CEO & Co-Founder
-                  %p.team-member-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-            / TEAM MEMBER 2
-            .col-sm-6.col-md-4.col-lg-2{"data-animation" => "fadeIn"}
-              .team-member.even
-                %img.team-member-picture{:alt => "", :src => "images/contents/team-member-2.jpg"}/
-                .team-member-text
-                  %h4.team-member-name Harold Kelly
-                  .team-member-position CTO & Co-Founder
-                  %p.team-member-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-            .hidden-md.hidden-lg.clear
-            / TEAM MEMBER 3
-            .col-sm-6.col-md-4.col-lg-2{"data-animation" => "fadeIn"}
-              .team-member
-                %img.team-member-picture{:alt => "", :src => "images/contents/team-member-3.jpg"}/
-                .team-member-text
-                  %h4.team-member-name Kathy Nelson
-                  .team-member-position Graphic Designer
-                  %p.team-member-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-            .hidden-sm.hidden-lg.clear
-            / TEAM MEMBER 4
-            .col-sm-6.col-md-4.col-lg-2{"data-animation" => "fadeIn"}
-              .team-member.even
-                %img.team-member-picture{:alt => "", :src => "images/contents/team-member-4.jpg"}/
-                .team-member-text
-                  %h4.team-member-name Dylan Fowler
-                  .team-member-position UI/UX Designer
-                  %p.team-member-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-            .hidden-md.hidden-lg.clear
-            / TEAM MEMBER 5
-            .col-sm-6.col-md-4.col-lg-2{"data-animation" => "fadeIn"}
-              .team-member
-                %img.team-member-picture{:alt => "", :src => "images/contents/team-member-5.jpg"}/
-                .team-member-text
-                  %h4.team-member-name Carolyn Harvey
-                  .team-member-position Development
-                  %p.team-member-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-            / TEAM MEMBER 6
-            .col-sm-6.col-md-4.col-lg-2{"data-animation" => "fadeIn"}
-              .team-member.even
-                %img.team-member-picture{:alt => "", :src => "images/contents/team-member-6.jpg"}/
-                .team-member-text
-                  %h4.team-member-name Diane Grant
-                  .team-member-position Marketing & Strategy
-                  %p.team-member-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-      / TWO COLS DESCRIPTION SECTION
-      %section#two-cols-description.two-cols-description-section.section-accent.section
-        .container-fluid.two-cols-description-row
-          / TWO COLS DESCRIPTION TEXT
-          .two-cols-description-text{"data-animation" => "fadeInLeft"}
-            .two-cols-description-text-inner
-              %h2.section-heading.text-left Two Columns Section
-              %p You can put image / video embed in the column to the right. If you like, you can also swap the columns, which means this text column will be on the right hand side, while the image column is on the left. While on this column, you may want to put some description paragraphs or a nice list like below:
-              %ul.nice-list
-                %li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                %li Sed feugiat arcu ut orci porta, eget porttitor felis suscipit.
-                %li Sed a nisl ullamcorper, tempus augue at, rutrum lacus. Duis et turpis eros.
-          / TWO COLS DESCRIPTION IMAGE
-          .two-cols-description-image{"data-animation" => "fadeInRight"}
-            %img{:alt => "", :src => "images/backgrounds/two-cols-description-bg.jpg"}/
-      / PRICING SECTION
-      %section#pricing.pricing-section.section
-        .container
-          %h2.section-heading.text-center Pricing Table
-          .row.text-center
-            .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
-              %p Maecenas mollis rutrum bibendum. Etiam mollis diam risus, at varius ex dapibus sed. In in leo at sapien placerat sagittis.
-          / PRICING TABLE
-          .pricing-table.row
-            / PRICING PACKAGE 1
-            .col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-0{"data-animation" => "fadeInUp"}
-              .pricing-package
-                .pricing-package-header
-                  %h4.price-title Personal
-                  .price
-                    %span.price-currency $
-                    %span.price-number 0
-                    %span.price-decimal
-                  .price-description FREE Forever
-                %ul.pricing-package-items
-                  %li Up to 20 Projects
-                  %li 500MB Harddisk Space
-                  %li Up to 1000 Monthly Visitors
-                  %li
-                    %del Custom Domain
-                  %li
-                    %del Premium Themes Access
-                  %li 24/7 Customer Support
-            / PRICING PACKAGE 2
-            .col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-0{"data-animation" => "fadeInUp"}
-              .pricing-package.pricing-package-featured
-                .pricing-package-header
-                  %h4.price-title Professional
-                  .price
-                    %span.price-currency $
-                    %span.price-number 13
-                    %span.price-decimal 99
-                  .price-description Billed monthly
-                  .price-featured Most Popular
-                %ul.pricing-package-items
-                  %li Up to 200 Projects
-                  %li 5GB Harddisk Space
-                  %li Unlimited Visitors
-                  %li Custom Domain
-                  %li
-                    %del Premium Themes Access
-                  %li 24/7 Customer Support
-            / PRICING PACKAGE 3
-            .col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-0{"data-animation" => "fadeInUp"}
-              .pricing-package
-                .pricing-package-header
-                  %h4.price-title Enterprise
-                  .price
-                    %span.price-currency $
-                    %span.price-number 69
-                    %span.price-decimal 99
-                  .price-description Billed monthly
-                %ul.pricing-package-items
-                  %li Unlimited Projects
-                  %li Unlimited Harddisk Space
-                  %li Unlimited Visitors
-                  %li Custom Domain
-                  %li Premium Themes Access
-                  %li 24/7 Customer Support
+                  %h4.hiw-item-title Reporting
+                  %p.hiw-item-description Reporting is one of the most important steps we take with our clients. We go over these reports with you, what worked best and continue to move forward with those best practices.
       / TESTIMONIAL SLIDER
       %section#testimonial-slider.testimonial-slider-section.section-dark.section
         .section-background
@@ -392,17 +221,6 @@ published: true
           .testimonial-slider-row.row
             .col-md-8.col-md-offset-2
               %ul.testimonial-slider.rslides{"data-auto" => "false", "data-speed" => "800", "data-timeout" => "4000"}
-                / TESTIMONIAL ITEM 1
-                %li.testimonial-slide
-                  %span.testimonial-ratings
-                    %span.fa.fa-star
-                    %span.fa.fa-star
-                    %span.fa.fa-star
-                    %span.fa.fa-star
-                    %span.fa.fa-star
-                  %blockquote.testimonial-quote
-                    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lectus dui, volutpat sed velit congue, pulvinar tristique nisi. Maecenas mollis rutrum bibendum. Etiam mollis diam risus, at varius ex dapibus sed. In in leo at sapien placerat sagittis.
-                  %cite.testimonial-cite John Doe, Company Inc.
                 / TESTIMONIAL ITEM 2
                 .testimonial-slide
                   %span.testimonial-ratings
@@ -410,10 +228,10 @@ published: true
                     %span.fa.fa-star
                     %span.fa.fa-star
                     %span.fa.fa-star
-                    %span.fa.fa-star-half-o
+                    %span.fa.fa-star
                   %blockquote.testimonial-quote
-                    %p Nulla lectus dui, volutpat sed velit congue, pulvinar tristique nisi. Maecenas mollis rutrum bibendum. Etiam mollis diam risus, at varius ex dapibus sed. In in leo at sapien placerat sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  %cite.testimonial-cite Dohn Joe, Internet Marketer
+                    %p Fast, affordable and cares about the customer and their pockets, A+ service!
+                  %cite.testimonial-cite George Vlahakis, TwiztID
                 / TESTIMONIAL ITEM 3
                 %li.testimonial-slide
                   %span.testimonial-ratings
@@ -423,8 +241,15 @@ published: true
                     %span.fa.fa-star
                     %span.fa.fa-star
                   %blockquote.testimonial-quote
-                    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lectus dui, volutpat sed velit congue, pulvinar tristique nisi. Maecenas mollis rutrum bibendum. Etiam mollis diam risus, at varius ex dapibus sed. In in leo at sapien placerat sagittis.
-                  %cite.testimonial-cite John Doe, Company Inc.
+                    %p
+                      Myrick Consulting is like having your own personal print
+                      shop. The staff is personable, professional, and always
+                      goes that extra mile to meet your every need. Not to
+                      mention, the quality of all of their products is top
+                      notch and the delivery times are untouchable. If you
+                      need quality printed products at a remarkable price,
+                      think Myrick Consulting. I do.
+                  %cite.testimonial-cite Rico Mann, Parks Millican & Mann
                 / TESTIMONIAL ITEM 4
                 .testimonial-slide
                   %span.testimonial-ratings
@@ -432,122 +257,19 @@ published: true
                     %span.fa.fa-star
                     %span.fa.fa-star
                     %span.fa.fa-star
-                    %span.fa.fa-star-half-o
+                    %span.fa.fa-star
                   %blockquote.testimonial-quote
-                    %p Nulla lectus dui, volutpat sed velit congue, pulvinar tristique nisi. Maecenas mollis rutrum bibendum. Etiam mollis diam risus, at varius ex dapibus sed. In in leo at sapien placerat sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  %cite.testimonial-cite Dohn Joe, Internet Marketer
-          .sponsors-row{"data-animation" => "bounceIn"}
-            %img{:alt => "", :src => "images/contents/sponsor-1a.png"}/
-            %img{:alt => "", :src => "images/contents/sponsor-2a.png"}/
-            %img{:alt => "", :src => "images/contents/sponsor-3a.png"}/
-            %img{:alt => "", :src => "images/contents/sponsor-4a.png"}/
-      / PORTFOLIO
-      %section#portfolio.portfolio-section.section
-        .container-fluid
-          %h2.section-heading.text-center Success Examples
-          .portfolio-row.row
-            / PORTFOLIO - ITEM 1
-            .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
-              .portfolio-item
-                %img.portfolio-item-picture{:alt => "", :src => "images/contents/portfolio-item-1.jpg"}/
-                .portfolio-item-overlay
-                .portfolio-item-text
-                  %h4.portfolio-item-title Package Box
-                  %p.portfolio-item-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
-            / PORTFOLIO - ITEM 2
-            .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
-              .portfolio-item
-                %img.portfolio-item-picture{:alt => "", :src => "images/contents/portfolio-item-2.jpg"}/
-                .portfolio-item-overlay
-                .portfolio-item-text
-                  %h4.portfolio-item-title Standard Square Box
-                  %p.portfolio-item-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
-            .hidden-md.hidden-lg.clear
-            / PORTFOLIO - ITEM 3
-            .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
-              .portfolio-item
-                %img.portfolio-item-picture{:alt => "", :src => "images/contents/portfolio-item-3.jpg"}/
-                .portfolio-item-overlay
-                .portfolio-item-text
-                  %h4.portfolio-item-title Vol22 Biz Card
-                  %p.portfolio-item-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
-            / PORTFOLIO - ITEM 4
-            .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
-              .portfolio-item
-                %img.portfolio-item-picture{:alt => "", :src => "images/contents/portfolio-item-4.jpg"}/
-                .portfolio-item-overlay
-                .portfolio-item-text
-                  %h4.portfolio-item-title Kyle Johnson Biz Card
-                  %p.portfolio-item-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
-            .clear
-            / PORTFOLIO - ITEM 5
-            .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
-              .portfolio-item
-                %img.portfolio-item-picture{:alt => "", :src => "images/contents/portfolio-item-5.jpg"}/
-                .portfolio-item-overlay
-                .portfolio-item-text
-                  %h4.portfolio-item-title Open Book
-                  %p.portfolio-item-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
-            / PORTFOLIO - ITEM 6
-            .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
-              .portfolio-item
-                %img.portfolio-item-picture{:alt => "", :src => "images/contents/portfolio-item-6.jpg"}/
-                .portfolio-item-overlay
-                .portfolio-item-text
-                  %h4.portfolio-item-title Michael Smith Biz Card
-                  %p.portfolio-item-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
-            .hidden-md.hidden-lg.clear
-            / PORTFOLIO - ITEM 7
-            .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
-              .portfolio-item
-                %img.portfolio-item-picture{:alt => "", :src => "images/contents/portfolio-item-7.jpg"}/
-                .portfolio-item-overlay
-                .portfolio-item-text
-                  %h4.portfolio-item-title PiecePaper Logo
-                  %p.portfolio-item-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
-            / PORTFOLIO - ITEM 8
-            .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
-              .portfolio-item
-                %img.portfolio-item-picture{:alt => "", :src => "images/contents/portfolio-item-8.jpg"}/
-                .portfolio-item-overlay
-                .portfolio-item-text
-                  %h4.portfolio-item-title Responsive Devices
-                  %p.portfolio-item-description Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vivamus eu sollicitudin lacus, nec ultricies lorem.
-      / FAQ
-      %section#faq.faq-section.section
-        .container
-          %h2.section-heading.text-center Frequently Asked Questions
-          .faq-row.row
-            .col-md-6
-              .faq-item
-                %span.faq-item-icon.fa.fa-question-circle
-                %h4.faq-item-heading How do I get started?
-                .faq-item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat arcu ut orci porta, eget porttitor felis suscipit. Sed a nisl ullamcorper, tempus augue at, rutrum lacus. Duis et turpis eros.
-            .col-md-6
-              .faq-item
-                %span.faq-item-icon.fa.fa-question-circle
-                %h4.faq-item-heading What are the requirements?
-                .faq-item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat arcu ut orci porta, eget porttitor felis suscipit. Sed a nisl ullamcorper, tempus augue at, rutrum lacus. Duis et turpis eros.
-            .col-md-6
-              .faq-item
-                %span.faq-item-icon.fa.fa-question-circle
-                %h4.faq-item-heading Is there any nice tutorial?
-                .faq-item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat arcu ut orci porta, eget porttitor felis suscipit. Sed a nisl ullamcorper, tempus augue at, rutrum lacus. Duis et turpis eros.
-            .col-md-6
-              .faq-item
-                %span.faq-item-icon.fa.fa-question-circle
-                %h4.faq-item-heading How about the quality?
-                .faq-item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat arcu ut orci porta, eget porttitor felis suscipit. Sed a nisl ullamcorper, tempus augue at, rutrum lacus. Duis et turpis eros.
-            .col-md-6
-              .faq-item
-                %span.faq-item-icon.fa.fa-question-circle
-                %h4.faq-item-heading How long til I can launch my page?
-                .faq-item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat arcu ut orci porta, eget porttitor felis suscipit. Sed a nisl ullamcorper, tempus augue at, rutrum lacus. Duis et turpis eros.
-            .col-md-6
-              .faq-item
-                %span.faq-item-icon.fa.fa-question-circle
-                %h4.faq-item-heading How to report issue / feedback?
-                .faq-item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat arcu ut orci porta, eget porttitor felis suscipit. Sed a nisl ullamcorper, tempus augue at, rutrum lacus. Duis et turpis eros.
+                    %p
+                      We have been dealing with Chris for a long time now and
+                      would follow him anywhere. The quality and service has
+                      been the best we have come across in our 30 years of
+                      business by far!!!
+                  %cite.testimonial-cite Alex Servellon, Audio Advisers Inc.
+          /.sponsors-row{"data-animation" => "bounceIn"}
+          /%img{:alt => "", :src => "images/contents/sponsor-1a.png"}/
+          /%img{:alt => "", :src => "images/contents/sponsor-2a.png"}/
+          /%img{:alt => "", :src => "images/contents/sponsor-3a.png"}/
+          /%img{:alt => "", :src => "images/contents/sponsor-4a.png"}/
       / CONTACT + MAPS
       %section#contact-maps.contact-maps-section.section
         .section-background
@@ -561,18 +283,11 @@ published: true
               var gmap_options = {
                 generate_controls : false,
                 locations : [{
-                  lat : -8.72093,
-                  lon : 115.16964,
+                  lat : 40.1983,
+                  lon : -83.0103,
                   animation : google.maps.Animation.DROP,
-                  html : "Drew Headquarter",
+                  html : "Headquarters",
                   icon : "images/contents/map-1.png",
-                  clickable : false,
-                }, {
-                  lat : -8.71595,
-                  lon : 115.17398,
-                  animation : google.maps.Animation.DROP,
-                  html : "Workshop & Store",
-                  icon : "images/contents/map-2.png",
                   clickable : false,
                 }],
                 map_options : {
@@ -582,12 +297,13 @@ published: true
                   zoomControlOptions : {
                     style : google.maps.ZoomControlStyle.SMALL,
                   },
-                  zoom : 15,
-                  set_center : [ -8.72093, 115.18964 ], // adjust the "lon" attribute of your first location
+                  zoom : 11,
+                  set_center : [ 40, -82.75 ],
                 },
                 styles : {
                   // source: https://snazzymaps.com/style/132/light-gray
-                  'custom' : [{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#d3d3d3"}]},{"featureType":"transit","stylers":[{"color":"#808080"},{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#b3b3b3"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"weight":1.8}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#d7d7d7"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ebebeb"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#a7a7a7"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#efefef"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#696969"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"color":"#737373"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#d6d6d6"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#dadada"}]}],
+                  'custom' :
+                  [{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#d3d3d3"}]},{"featureType":"transit","stylers":[{"color":"#808080"},{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#b3b3b3"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"weight":1.8}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#d7d7d7"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ebebeb"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#a7a7a7"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#efefef"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#696969"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"color":"#737373"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#d6d6d6"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#dadada"}]}],
                 },
               };
         .container
@@ -648,7 +364,7 @@ published: true
         .container
           %h3.closing-shout Ready to start? Take the first step by clicking the button below
           .closing-buttons{"data-animation" => "tada"}
-            %a.anchor-link.btn.btn-lg.btn-primary{:href => "#hero"} Footer Action Button
+            %a.anchor-link.btn.btn-lg.btn-primary{:href => "#contact-maps"} Contact US
       / FOOTER
       %section#footer.footer-section.section
         .container
