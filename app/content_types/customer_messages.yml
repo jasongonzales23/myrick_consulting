@@ -1,0 +1,29 @@
+# Public name of this content type
+name: Customer messages
+slug: customer_messages
+description: Results from contact form
+label_field_name: name
+order_by: manually # default: manually, also available: created_at or any field slug
+public_submission_enabled: true
+
+fields: 
+- name: # Name of the field
+    label: Name
+    type: string
+    required: true
+    hint: Customer name from form
+    localized: false
+
+- email: # Name of the field
+    label: Email
+    type: string
+    required: true
+    hint: Customer contact email from form
+    localized: false
+
+- message: # Name of the field
+    label: Message
+    type: text
+    required: false
+    hint: Customer message from form
+    localized: false

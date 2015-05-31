@@ -15,6 +15,7 @@ published: true
     %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
     %title {{site.name}}
     //TODO create favicon
+    //TODO add google analytics
     //%link{:href => "images/favicons/favicon.ico", :rel => "icon"}/
     %link{:href => "images/favicons/apple-touch-icon.png", :rel => "apple-touch-icon"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet"}/
@@ -287,7 +288,7 @@ published: true
                   lon : -83.0103,
                   animation : google.maps.Animation.DROP,
                   html : "Headquarters",
-                  icon : "images/contents/map-1.png",
+                  icon : '{{"contents/map-1.png" | theme_image_url}}',
                   clickable : false,
                 }],
                 map_options : {
@@ -327,18 +328,18 @@ published: true
                       %li
                         %i.fa-li.fa.fa-envelope-o
                         Email: <a href="mailto:myrickconsulting@gmail.com">myrickconsulting@gmail.com</a>
-                %form.form.form-ajax-submit{:action => "modules/send-email.php", :method => "post", :name => "contact"}
+                %form.form.form-ajax-submit{:action => "{{contents.customer_messages.public_submission_url}}.json", :method => "post"}
+                  {% csrf_param %}
+
                   %p
                     %strong Or drop us a line here:
                   .form-validation.alert
                   .form-group
-                    %input.form-control{:name => "contact-name", :placeholder => "Your Name", :type => "text"}/
+                    %input.form-control{:name => "content[name]", :placeholder => "Your Name", :type => "text", :value => "{{customer_message.name}}" }
                   .form-group
-                    %input.form-control{:name => "contact-email", :placeholder => "Email Address", :type => "text"}/
+                    %input.form-control{:name => "content[email]", :placeholder => "Email Address", :type => "text", :value => "{{customer_message.email}}" }
                   .form-group
-                    %input.form-control{:name => "contact-subject", :placeholder => "Subject", :type => "text"}/
-                  .form-group
-                    %textarea.form-control{:name => "contact-message", :placeholder => "Message", :rows => "5"}
+                    %textarea.form-control{:name => "content[message]", :placeholder => "Message", :rows => "5", :value => "{{customer_message.message}}" }
                   .form-group
                     %button.btn.btn-primary.btn-lg.btn-block Send Message
       / CLOSING
