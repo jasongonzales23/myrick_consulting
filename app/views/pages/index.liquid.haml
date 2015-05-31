@@ -41,7 +41,7 @@ published: true
               %span.icon-bar
             / HEADER LOGO
             %a.navbar-logo.navbar-brand.anchor-link{:href => "#hero"}
-              %img{:alt => "Drew", :src => "images/logos/header-logo.png"}
+              {{ 'logos/header-logo.png' | theme_image_tag: "alt:Myrick" }}
           %nav#navigation.navigation.navbar-collapse.collapse.navbar-right
             / NAVIGATION LINKS
             %ul#header-nav.nav.navbar-nav
@@ -63,7 +63,7 @@ published: true
         .section-background
           / IMAGE BACKGROUND
           .section-background-image.parallax{"data-stellar-ratio" => "0.4"}
-            %img{:alt => "", :src => "images/backgrounds/section1_background.jpg", :style => "opacity: .7;"}
+            {{ 'backgrounds/section1_background.jpg' | theme_image_tag: 'class:opacity-07' }}
         .container
           .hero-content
             .hero-content-inner
@@ -97,7 +97,7 @@ published: true
           .about-row.row
             / DESCRIPTION IMAGE
             .about-image.col-md-6{"data-animation" => "fadeIn"}
-              %img{:alt => "Description Image", :src => "images/contents/about_image.jpg"}/
+              {{ 'contents/about_image.jpg' | theme_image_tag: "alt: Description Image" }}
             / DESCRIPTION TEXT
             .about-text.col-md-6
               %p.lead 
@@ -179,7 +179,7 @@ published: true
             / HOW IT WORKS - ITEM 1
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
               .hiw-item
-                %img.hiw-item-picture{:alt => "", :src => "images/contents/step-1.jpg"}/
+                {{ 'contents/step-1.jpg' | theme_image_tag: "class:hiw-item-picture" }}
                 .hiw-item-text
                   %span.hiw-item-icon 1
                   %h4.hiw-item-title Contact Myrick
@@ -188,7 +188,7 @@ published: true
             / HOW IT WORKS - ITEM 2
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
               .hiw-item.even
-                %img.hiw-item-picture{:alt => "", :src => "images/contents/step-2.jpg"}/
+                {{ 'contents/step-2.jpg' | theme_image_tag: "class:hiw-item-picture" }}
                 .hiw-item-text
                   %span.hiw-item-icon 2
                   %h4.hiw-item-title Research & Strategize
@@ -197,7 +197,7 @@ published: true
             / HOW IT WORKS - ITEM 3
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
               .hiw-item
-                %img.hiw-item-picture{:alt => "", :src => "images/contents/step-3.jpg"}/
+                {{ 'contents/step-3.jpg' | theme_image_tag: "class:hiw-item-picture" }}
                 .hiw-item-text
                   %span.hiw-item-icon 3
                   %h4.hiw-item-title Execute & Manage 
@@ -205,7 +205,7 @@ published: true
             / HOW IT WORKS - ITEM 4
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
               .hiw-item.even
-                %img.hiw-item-picture{:alt => "", :src => "images/contents/step-4.jpg"}/
+                {{ 'contents/step-4.jpg' | theme_image_tag: "class:hiw-item-picture" }}
                 .hiw-item-text
                   %span.hiw-item-icon 4
                   %h4.hiw-item-title Reporting
@@ -215,7 +215,7 @@ published: true
         .section-background
           / IMAGE BACKGROUND
           .section-background-image.parallax{"data-stellar-ratio" => "0.4"}
-            %img{:src => "images/backgrounds/testimonial-slider-bg.jpg", :style => "opacity: 0.15;"}/
+            {{ 'backgrounds/testimonial-slider-bg.jpg' | theme_image_tag: "class:opacity-015" }}
         .container
           %h2.section-heading.text-center.hidden Trusted by Thousands
           .testimonial-slider-row.row
@@ -346,7 +346,7 @@ published: true
         .section-background
           / IMAGE BACKGROUND
           .section-background-image.parallax{"data-stellar-ratio" => "0.4"}
-            %img{:alt => "", :src => "images/contents/step-1.jpg", :style => "opacity: 0.15;"}/
+            {{ 'contents/step-1.jpg' | theme_image_tag: 'class:opacity-015' }}
         .container
           %h3.closing-shout Ready to start? Take the first step by contacting us!
           .closing-buttons{"data-animation" => "tada"}
@@ -355,7 +355,7 @@ published: true
       %section#footer.footer-section.section
         .container
           %h3.footer-logo
-            %img{:alt => "Myrick", :src => "images/logos/footer-logo.png"}
+            {{ 'logos/footer-logo.png' | theme_image_tag }}
           .footer-socmed
             %a{:href => "https://www.facebook.com/myrickconsulting", :target => "_blank"}
               %span.fa.fa-facebook
