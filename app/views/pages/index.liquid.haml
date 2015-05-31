@@ -41,7 +41,7 @@ published: true
               %span.icon-bar
             / HEADER LOGO
             %a.navbar-logo.navbar-brand.anchor-link{:href => "#hero"}
-              %img{:alt => "Drew", :src => "images/logos/header-logo.png", :srcset => "images/logos/header-logo@2x.png 2x"}/
+              %img{:alt => "Drew", :src => "images/logos/header-logo.png"}
           %nav#navigation.navigation.navbar-collapse.collapse.navbar-right
             / NAVIGATION LINKS
             %ul#header-nav.nav.navbar-nav
@@ -75,7 +75,7 @@ published: true
                     %p.hero-tagline Where Ideas Come to Life
                   %p.hero-buttons.text-center
                     %a.btn.btn-lg.btn-default{:href => "#about"} Learn More
-                    %a.btn.btn-lg.btn-primary{:href => "https://wrapbootstrap.com/theme/drew-all-in-one-marketing-landing-page-WB0350PTJ"} Buy This Template
+                    %a.btn.btn-lg.btn-primary{:href => "#contact-maps"} Contact Us
         / HERO START LINK
         %a.hero-start-link.anchor-link{:href => "#headline"}
           %span.fa.fa-angle-double-down
@@ -311,36 +311,22 @@ published: true
             .col-md-7.col-md-offset-5
               .contact-maps-box{"data-animation" => "fadeIn"}
                 %h2.section-heading Contact Us
-                %p Suspendisse nisi est, ullamcorper id eleifend nec, aliquam eget quam. Vivamus erat libero, venenatis ac metus in, lobortis rhoncus ex.
+                %p Want to work with us? Just have questions? Contact us using the contact form below. Let's get started!
                 .row
-                  %address.col-sm-6
-                    %strong Drew Headquarter
-                  %ul.fa-ul
-                    %li
-                      %i.fa-li.fa.fa-home>
-                      Jalan Pantai Kuta, Kuta
-                      %br>/
-                      Bali, Indonesia
-                    %li
-                      %i.fa-li.fa.fa-phone>
-                      Phone: +62 109 876543
-                    %li
-                      %i.fa-li.fa.fa-fax>
-                      Fax: +62 109 876543
-                  %address.col-sm-6
-                    %strong Workshop & Store
-                  %ul.fa-ul
-                    %li
-                      %i.fa-li.fa.fa-home>
-                      Jalan Legian, Kuta
-                      %br>/
-                      Bali, Indonesia
-                    %li
-                      %i.fa-li.fa.fa-phone>
-                      Phone: +62 109 876543
-                    %li
-                      %i.fa-li.fa.fa-fax>
-                      Fax: +62 109 876543
+                  %address.col-sm-12
+                    %strong Myrick Consulting
+                    %ul.fa-ul
+                      %li
+                        %i.fa-li.fa.fa-home
+                        PO Box 291
+                        %br>/
+                        Lewis Center, OH 43035
+                      %li
+                        %i.fa-li.fa.fa-phone
+                        Phone: 800-571-1957
+                      %li
+                        %i.fa-li.fa.fa-envelope-o
+                        Email: <a href="mailto:myrickconsulting@gmail.com">myrickconsulting@gmail.com</a>
                 %form.form.form-ajax-submit{:action => "modules/send-email.php", :method => "post", :name => "contact"}
                   %p
                     %strong Or drop us a line here:
@@ -360,27 +346,25 @@ published: true
         .section-background
           / IMAGE BACKGROUND
           .section-background-image.parallax{"data-stellar-ratio" => "0.4"}
-            %img{:alt => "", :src => "images/backgrounds/closing-bg.jpg", :style => "opacity: 0.15;"}/
+            %img{:alt => "", :src => "images/contents/step-1.jpg", :style => "opacity: 0.15;"}/
         .container
-          %h3.closing-shout Ready to start? Take the first step by clicking the button below
+          %h3.closing-shout Ready to start? Take the first step by contacting us!
           .closing-buttons{"data-animation" => "tada"}
-            %a.anchor-link.btn.btn-lg.btn-primary{:href => "#contact-maps"} Contact US
+            %a.anchor-link.btn.btn-lg.btn-primary{:href => "#contact-maps"} Contact Us
       / FOOTER
       %section#footer.footer-section.section
         .container
           %h3.footer-logo
-            %img{:alt => "Drew", :src => "images/logos/footer-logo.png", :srcset => "images/logos/footer-logo@2x.png 2x"}/
+            %img{:alt => "Myrick", :src => "images/logos/footer-logo.png"}
           .footer-socmed
-            %a{:href => "#", :target => "_blank"}
+            %a{:href => "https://www.facebook.com/myrickconsulting", :target => "_blank"}
               %span.fa.fa-facebook
-            %a{:href => "#", :target => "_blank"}
+            %a{:href => "https://twitter.com/Myrickadv", :target => "_blank"}
               %span.fa.fa-twitter
-            %a{:href => "#", :target => "_blank"}
-              %span.fa.fa-instagram
-            %a{:href => "#", :target => "_blank"}
-              %span.fa.fa-pinterest
-          .footer-copyright
-            \© 2015 Drew Landing Page
+            %a{:href => "https://www.linkedin.com/pub/chris-myers/23/21a/a2", :target => "_blank"}
+              %span.fa.fa-linkedin
+            %a{:href => "https://plus.google.com/106866312663851652672/posts", :target => "_blank"}
+              %span.fa.fa-google-plus
     / LIBRARIES JS
     {{ 'jquery-1.11.2.min.js' | javascript_tag }}
     {{ 'bootstrap.min.js' | javascript_tag }}
