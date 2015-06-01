@@ -63,7 +63,13 @@ published: true
         .section-background
           / IMAGE BACKGROUND
           .section-background-image.parallax{"data-stellar-ratio" => "0.4"}
+            {% capture hero_img_url %}{% editable_file 'hero_img' %}{% endeditable_file %}{% endcapture %}
+            {% if hero_img_url != '' %}
+            {{ hero_img_url | image_tag }}
+            {% else %}
             {{ 'backgrounds/section1_background.jpg' | theme_image_tag: 'class:opacity-07' }}
+            {% endif %}
+
         .container
           .hero-content
             .hero-content-inner
@@ -100,7 +106,13 @@ published: true
           .about-row.row
             / DESCRIPTION IMAGE
             .about-image.col-md-6{"data-animation" => "fadeIn"}
+              {% capture about_img_url %}{% editable_file 'about_img' %}{% endeditable_file %}{% endcapture %}
+              {% if about_img_url != '' %}
+              {{ about_img_url | image_tag }}
+              {% else %}
               {{ 'contents/about_image.jpg' | theme_image_tag: "alt: Description Image" }}
+              {% endif %}
+
             / DESCRIPTION TEXT
             .about-text.col-md-6
               .lead
@@ -205,7 +217,12 @@ published: true
             / HOW IT WORKS - ITEM 1
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
               .hiw-item
+                {% capture step1_img_url %}{% editable_file 'how_it_works_step_1' %}{% endeditable_file %}{% endcapture %}
+                {% if step1_img_url != '' %}
+                {{ step1_img_url | image_tag: "class:hiw-item-picture" }}
+                {% else %}
                 {{ 'contents/step-1.jpg' | theme_image_tag: "class:hiw-item-picture" }}
+                {% endif %}
                 .hiw-item-text
                   %span.hiw-item-icon 1
                   %h4.hiw-item-title Contact Myrick
@@ -223,7 +240,12 @@ published: true
             / HOW IT WORKS - ITEM 2
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
               .hiw-item.even
+                {% capture step2_img_url %}{% editable_file 'how_it_works_step_2' %}{% endeditable_file %}{% endcapture %}
+                {% if step2_img_url != '' %}
+                {{ step2_img_url | image_tag: "class:hiw-item-picture" }}
+                {% else %}
                 {{ 'contents/step-2.jpg' | theme_image_tag: "class:hiw-item-picture" }}
+                {% endif %}
                 .hiw-item-text
                   %span.hiw-item-icon 2
                   %h4.hiw-item-title Research & Strategize
@@ -237,7 +259,12 @@ published: true
             / HOW IT WORKS - ITEM 3
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
               .hiw-item
+                {% capture step3_img_url %}{% editable_file 'how_it_works_step_3' %}{% endeditable_file %}{% endcapture %}
+                {% if step3_img_url != '' %}
+                {{ step3_img_url | image_tag: "class:hiw-item-picture" }}
+                {% else %}
                 {{ 'contents/step-3.jpg' | theme_image_tag: "class:hiw-item-picture" }}
+                {% endif %}
                 .hiw-item-text
                   %span.hiw-item-icon 3
                   %h4.hiw-item-title Execute & Manage 
@@ -251,7 +278,12 @@ published: true
             / HOW IT WORKS - ITEM 4
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
               .hiw-item.even
+                {% capture step4_img_url %}{% editable_file 'how_it_works_step_4' %}{% endeditable_file %}{% endcapture %}
+                {% if step4_img_url != '' %}
+                {{ step4_img_url | image_tag: "class:hiw-item-picture" }}
+                {% else %}
                 {{ 'contents/step-4.jpg' | theme_image_tag: "class:hiw-item-picture" }}
+                {% endif %}
                 .hiw-item-text
                   %span.hiw-item-icon 4
                   %h4.hiw-item-title Reporting
@@ -269,7 +301,12 @@ published: true
         .section-background
           / IMAGE BACKGROUND
           .section-background-image.parallax{"data-stellar-ratio" => "0.4"}
+            {% capture testimonial_background_img_url %}{% editable_file 'testimonial_background_img' %}{% endeditable_file %}{% endcapture %}
+            {% if testimonial_background_img_url != '' %}
+            {{ testimonial_background_img_url | image_tag: "class:opacity-015" }}
+            {% else %}
             {{ 'backgrounds/testimonial-slider-bg.jpg' | theme_image_tag: "class:opacity-015" }}
+            {% endif %}
         .container
           %h2.section-heading.text-center.hidden Trusted by Thousands
           .testimonial-slider-row.row
@@ -423,7 +460,12 @@ published: true
         .section-background
           / IMAGE BACKGROUND
           .section-background-image.parallax{"data-stellar-ratio" => "0.4"}
+            {% capture closing_img_url %}{% editable_file 'closing_img' %}{% endeditable_file %}{% endcapture %}
+            {% if closing_img_url != '' %}
+            {{ closing_img_url | image_tag: "class:opacity-015" }}
+            {% else %}
             {{ 'contents/step-1.jpg' | theme_image_tag: 'class:opacity-015' }}
+            {% endif %}
         .container
           %h3.closing-shout Ready to start? Take the first step by contacting us!
           .closing-buttons{"data-animation" => "tada"}
