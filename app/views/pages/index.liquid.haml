@@ -15,9 +15,9 @@ published: true
     %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
     %title {{site.name}}
     //TODO create favicon
-    //TODO add google analytics
     //%link{:href => "images/favicons/favicon.ico", :rel => "icon"}/
     %link{:href => "images/favicons/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    {% google_analytics 'UA-63614013-1'%}
     %link{:href => "http://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", :rel => "stylesheet"}/
     %link{:href => "{{ 'favicon.ico' | theme_image_url }}", :rel => "shortcut icon", :type => "image/vnd.microsoft.icon"}
@@ -27,7 +27,6 @@ published: true
     {{ 'style.css' | stylesheet_tag }}
     / COLORS STYLES
     {{ 'colors/blue.css' | stylesheet_tag }}
-    {% inline_editor %}
   %body.enable-animations.enable-preloader
     #document.document
       / HEADER
@@ -86,11 +85,14 @@ published: true
           %h2.section-heading.text-center.hidden Tagline
           .row
             .col-md-10.col-md-offset-1
-              %p.headline-text
-                Status quo doesn't work for us. Going above and beyond for our
-                customers is not just a saying; it's the way we live. Our
-                mission is to provide the most memorable experience for our
-                customers and theirs.
+              .headline-text
+                {% editable_text "tagline", hint: "Short tagline that appears directly under the hero area" %}
+                %p
+                  Status quo doesn't work for us. Going above and beyond for our
+                  customers is not just a saying; it's the way we live. Our
+                  mission is to provide the most memorable experience for our
+                  customers and theirs.
+                {% endeditable_text %}
       / DESCRIPTION
       %section#about.about-section.section
         .container
@@ -101,9 +103,13 @@ published: true
               {{ 'contents/about_image.jpg' | theme_image_tag: "alt: Description Image" }}
             / DESCRIPTION TEXT
             .about-text.col-md-6
-              %p.lead 
-                We are quality and customer centric enabling us to build great
-                relationships with our customers and within our community.
+              .lead
+                {% editable_text "About section lead", hint: "Short lead that appears directly above about text" %}
+                %p
+                  We are quality and customer centric enabling us to build great
+                  relationships with our customers and within our community.
+                {% endeditable_text %}
+              {% editable_text "About section main text", hint: "About section main text" %}
               %p
                 Myrick Consulting is an advertising company that specializes in
                 print and digital advertising. We Partner with businesses to
@@ -112,6 +118,7 @@ published: true
                 advertising, websites, hosting and may other services. We are
                 quality and customer centric enabling us to build great
                 relationships with our customers and within our community.
+              {% endeditable_text %}
       / Products
       %section#benefits.benefits-section.section-gray.section
         .container
@@ -122,56 +129,74 @@ published: true
               .benefit
                 %span.benefit-icon.fa.fa-area-chart{"data-animation" => "bounceIn"}
                 %h4.benefit-title Marketing Strategy/Analysis
-                %p.benefit-description
-                  Quality strategies with unparalleled analysis! Campaigns are
-                  only as good as the data it generates, and how you read and
-                  react to it. This is where Myrick excels.
+                .benefit-description
+                  {% editable_text "Product 1" %}
+                  %p
+                    Quality strategies with unparalleled analysis! Campaigns are
+                    only as good as the data it generates, and how you read and
+                    react to it. This is where Myrick excels.
+                  {% endeditable_text %}
             / BENEFIT 2
             .col-sm-6.col-md-4
               .benefit
                 %span.benefit-icon.fa.fa-laptop{"data-animation" => "bounceIn"}
                 %h4.benefit-title Websites
-                %p.benefit-description
-                  Modern designs with easy to maintain CMS's for lower
-                  maintenance costs. Sites built with optimization in mind.
+                .benefit-description
+                  {% editable_text "Product 2" %}
+                  %p
+                    Modern designs with easy to maintain CMS's for lower
+                    maintenance costs. Sites built with optimization in mind.
+                  {% endeditable_text %}
             .hidden-md.hidden-lg.clear
             / BENEFIT 3
             .col-sm-6.col-md-4
               .benefit
                 %span.benefit-icon.fa.fa-print{"data-animation" => "bounceIn"}
                 %h4.benefit-title Print
-                %p.benefit-description
-                  From business cards to 25' banners and everything in between.
-                  Producing mail campaigns, brochures, presentation folders and
-                  more all while using the most high quality printing
-                  practices.
+                .benefit-description
+                  {% editable_text "Product 3" %}
+                  %p
+                    From business cards to 25' banners and everything in between.
+                    Producing mail campaigns, brochures, presentation folders and
+                    more all while using the most high quality printing
+                    practices.
+                  {% endeditable_text %}
             .hidden-sm.clear
             / BENEFIT 4
             .col-sm-6.col-md-4
               .benefit
                 %span.benefit-icon.fa.fa-rocket{"data-animation" => "bounceIn"}
                 %h4.benefit-title SEO
-                %p.benefit-description
-                  Our SEO & PPC department work hand and hand with our website
-                  department so you can hit the ground running. We use best
-                  practices from Google, and are Google certified.
+                .benefit-description
+                  {% editable_text "Product 4" %}
+                  %p
+                    Our SEO & PPC department work hand and hand with our website
+                    department so you can hit the ground running. We use best
+                    practices from Google, and are Google certified.
+                  {% endeditable_text %}
             .hidden-md.hidden-lg.clear
             / BENEFIT 5
             .col-sm-6.col-md-4
               .benefit
                 %span.benefit-icon.fa.fa-crop{"data-animation" => "bounceIn"}
                 %h4.benefit-title Graphic Design
-                %p.benefit-description
-                  Design in a way to draw attention and invoke a quality response or lead!
+                .benefit-description
+                  {% editable_text "Product 5" %}
+                  %p
+                    Design in a way to draw attention and invoke a quality response or lead!
+                  {% endeditable_text %}
             / BENEFIT 6
             .col-sm-6.col-md-4
               .benefit
                 %span.benefit-icon.fa.fa-hand-o-up{"data-animation" => "bounceIn"}
                 %h4.benefit-title Digital Advertising
-                %p.benefit-description
-                  Re-Targeting, Digital Display, and IP Targeting! Narrow your
-                  demographic by using one or many of the 750 plus different
-                  household criteria you can choose from.
+                .benefit-description
+                  {% editable_text "Product 6" %}
+                  %p
+                    Re-Targeting, Digital Display, and IP Targeting! Narrow your
+                    demographic by using one or many of the 750 plus different
+                    household criteria you can choose from.
+                  {% endeditable_text %}
       / HOW IT WORKS
       %section#how-it-works.how-it-works-section.section
         .container-fluid
@@ -184,7 +209,16 @@ published: true
                 .hiw-item-text
                   %span.hiw-item-icon 1
                   %h4.hiw-item-title Contact Myrick
-                  %p.hiw-item-description Call us, Tweet at us, post on our Facebook page! Just reach out any way you can so we can get started.
+                  .hiw-item-description
+                    {% editable_text "How It Works 1" %}
+                    %p
+                      Call us, use our contact form on this page, Tweet at us,
+                      post on our Facebook page! Just reach out any way you can
+                      so we can get started.
+                    {% endeditable_text %}
+                    %p
+                      %a.btn.btn-primary{:href => "#contact-maps"} Contact Us
+
 
             / HOW IT WORKS - ITEM 2
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
@@ -193,7 +227,12 @@ published: true
                 .hiw-item-text
                   %span.hiw-item-icon 2
                   %h4.hiw-item-title Research & Strategize
-                  %p.hiw-item-description We research your primary and secondary demographic, and then develop the strategy and message to reach them.
+                  .hiw-item-description
+                    {% editable_text "How It Works 2" %}
+                    %p
+                      We research your primary and secondary demographic, and
+                      then develop the strategy and message to reach them.
+                    {% endeditable_text %}
             .hidden-md.hidden-lg.clear
             / HOW IT WORKS - ITEM 3
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
@@ -202,7 +241,13 @@ published: true
                 .hiw-item-text
                   %span.hiw-item-icon 3
                   %h4.hiw-item-title Execute & Manage 
-                  %p.hiw-item-description Execute & manage the campaign. Adjusting the campaign if necessary based on the analytics is something Myrick prides itself on.
+                  .hiw-item-description
+                    {% editable_text "How It Works 3" %}
+                    %p
+                      Execute & manage the campaign. Adjusting the campaign if
+                      necessary based on the analytics is something Myrick
+                      prides itself on.
+                    {% endeditable_text %}
             / HOW IT WORKS - ITEM 4
             .col-sm-6.col-md-3{"data-animation" => "fadeIn"}
               .hiw-item.even
@@ -210,7 +255,15 @@ published: true
                 .hiw-item-text
                   %span.hiw-item-icon 4
                   %h4.hiw-item-title Reporting
-                  %p.hiw-item-description Reporting is one of the most important steps we take with our clients. We go over these reports with you, what worked best and continue to move forward with those best practices.
+                  .hiw-item-description
+                    {% editable_text "How It Works 4" %}
+                    %p
+                      Reporting is one of the most important steps we take with
+                      our clients. We go over these reports with you, what
+                      worked best and continue to move forward with those best
+                      practices.
+                    {% endeditable_text %}
+            / HOW IT WORKS - ITEM 4
       / TESTIMONIAL SLIDER
       %section#testimonial-slider.testimonial-slider-section.section-dark.section
         .section-background
@@ -231,8 +284,13 @@ published: true
                     %span.fa.fa-star
                     %span.fa.fa-star
                   %blockquote.testimonial-quote
+                    {% editable_text "Testimonial 1" %}
                     %p Fast, affordable and cares about the customer and their pockets, A+ service!
-                  %cite.testimonial-cite George Vlahakis, TwiztID
+                    {% endeditable_text %}
+                  .testimonial-cite
+                    {% editable_text "Testimonial 1 - cite" %}
+                    %p George Vlahakis, TwiztID
+                    {% endeditable_text %}
                 / TESTIMONIAL ITEM 3
                 %li.testimonial-slide
                   %span.testimonial-ratings
@@ -242,6 +300,7 @@ published: true
                     %span.fa.fa-star
                     %span.fa.fa-star
                   %blockquote.testimonial-quote
+                    {% editable_text "Testimonial 2" %}
                     %p
                       Myrick Consulting is like having your own personal print
                       shop. The staff is personable, professional, and always
@@ -250,7 +309,11 @@ published: true
                       notch and the delivery times are untouchable. If you
                       need quality printed products at a remarkable price,
                       think Myrick Consulting. I do.
-                  %cite.testimonial-cite Rico Mann, Parks Millican & Mann
+                    {% endeditable_text %}
+                  .testimonial-cite 
+                    {% editable_text "Testimonial 2 - cite" %}
+                    %p Rico Mann, Parks Millican & Mann
+                    {% endeditable_text %}
                 / TESTIMONIAL ITEM 4
                 .testimonial-slide
                   %span.testimonial-ratings
@@ -260,12 +323,17 @@ published: true
                     %span.fa.fa-star
                     %span.fa.fa-star
                   %blockquote.testimonial-quote
+                    {% editable_text "Testimonial 3" %}
                     %p
                       We have been dealing with Chris for a long time now and
                       would follow him anywhere. The quality and service has
                       been the best we have come across in our 30 years of
                       business by far!!!
-                  %cite.testimonial-cite Alex Servellon, Audio Advisers Inc.
+                    {% endeditable_text %}
+                  .testimonial-cite
+                    {% editable_text "Testimonial 3 - cite" %}
+                    %p Alex Servellon, Audio Advisers Inc.
+                    {% endeditable_text %}
           /.sponsors-row{"data-animation" => "bounceIn"}
           /%img{:alt => "", :src => "images/contents/sponsor-1a.png"}/
           /%img{:alt => "", :src => "images/contents/sponsor-2a.png"}/
@@ -312,19 +380,27 @@ published: true
             .col-md-7.col-md-offset-5
               .contact-maps-box{"data-animation" => "fadeIn"}
                 %h2.section-heading Contact Us
+                {% editable_text "Contact Us Headline" %}
                 %p Want to work with us? Just have questions? Contact us using the contact form below. Let's get started!
+                {% endeditable_text %}
                 .row
                   %address.col-sm-12
                     %strong Myrick Consulting
                     %ul.fa-ul
                       %li
                         %i.fa-li.fa.fa-home
+                        {% editable_text "Address Line 1", format: "raw" %}
                         PO Box 291
+                        {% endeditable_text %}
                         %br>/
+                        {% editable_text "Address Line 2", format: "raw" %}
                         Lewis Center, OH 43035
+                        {% endeditable_text %}
                       %li
                         %i.fa-li.fa.fa-phone
+                        {% editable_text "Phone info", format: "raw" %}
                         Phone: 800-571-1957
+                        {% endeditable_text %}
                       %li
                         %i.fa-li.fa.fa-envelope-o
                         Email: <a href="mailto:myrickconsulting@gmail.com">myrickconsulting@gmail.com</a>
