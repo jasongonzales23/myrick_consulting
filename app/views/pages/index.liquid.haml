@@ -54,10 +54,12 @@ published: true
               %li
                 %a{:href => "#how-it-works"} How it Works
               %li
-                %a{:href => "#testimonial-slider"} Testimonial
+                %a{:href => "#testimonial-slider"} Testimonials
               / HEADER ACTION BUTTON
               %li.header-action-button
                 %a.btn.btn-primary{:href => "#contact-maps"} Contact Us
+              %li.header-action-button
+                %a.btn.btn-default{:href => "https://www.hightail.com/u/myrickadv", target: "_blank"} File Upload
       / HERO
       %section#hero.hero-section.hero-layout-simple.hero-fullscreen.section.section-dark
         .section-background
@@ -102,7 +104,7 @@ published: true
       / DESCRIPTION
       %section#about.about-section.section
         .container
-          %h2.section-heading.text-center About Myrick Consulting
+          %h2.section-heading.text-center About Myrick Advertising
           .about-row.row
             / DESCRIPTION IMAGE
             .about-image.col-md-6{"data-animation" => "fadeIn"}
@@ -123,7 +125,7 @@ published: true
                 {% endeditable_text %}
               {% editable_text "About section main text", hint: "About section main text" %}
               %p
-                Myrick Consulting is an advertising company that specializes in
+                Myrick Advertising is an advertising company that specializes in
                 print and digital advertising. We Partner with businesses to
                 develop, execute, manage, and analyze your advertising
                 campaigns. Myrick provides quality print products, digital
@@ -339,13 +341,13 @@ published: true
                   %blockquote.testimonial-quote
                     {% editable_text "Testimonial 2" %}
                     %p
-                      Myrick Consulting is like having your own personal print
+                      Myrick Advertising is like having your own personal print
                       shop. The staff is personable, professional, and always
                       goes that extra mile to meet your every need. Not to
                       mention, the quality of all of their products is top
                       notch and the delivery times are untouchable. If you
                       need quality printed products at a remarkable price,
-                      think Myrick Consulting. I do.
+                      think Myrick Advertising. I do.
                     {% endeditable_text %}
                   .testimonial-cite 
                     {% editable_text "Testimonial 2 - cite" %}
@@ -422,7 +424,7 @@ published: true
                 {% endeditable_text %}
                 .row
                   %address.col-sm-12
-                    %strong Myrick Consulting
+                    %strong Myrick Advertising
                     %ul.fa-ul
                       %li
                         %i.fa-li.fa.fa-home
@@ -440,7 +442,7 @@ published: true
                         {% endeditable_text %}
                       %li
                         %i.fa-li.fa.fa-envelope-o
-                        Email: <a href="mailto:myrickconsulting@gmail.com">myrickconsulting@gmail.com</a>
+                        Email: <a href="mailto:cmyers@myrickadv.com">cmyers@myrickadv.com</a>
                 %form.form.form-ajax-submit{:action => "{{contents.customer_messages.public_submission_url}}.json", :method => "post"}
                   {% csrf_param %}
 
@@ -451,6 +453,8 @@ published: true
                     %input.form-control{:name => "content[name]", :placeholder => "Your Name", :type => "text", :value => "{{customer_message.name}}" }
                   .form-group
                     %input.form-control{:name => "content[email]", :placeholder => "Email Address", :type => "text", :value => "{{customer_message.email}}" }
+                  .form-group
+                    %input.form-control{:name => "content[company]", :placeholder => "Company", :type => "text", :value => "{{customer_message.company}}" }
                   .form-group
                     %textarea.form-control{:name => "content[message]", :placeholder => "Message", :rows => "5", :value => "{{customer_message.message}}" }
                   .form-group

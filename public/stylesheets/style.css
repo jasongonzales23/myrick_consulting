@@ -281,7 +281,8 @@ iframe {
 }
 .section-dark {
   background-color: #222;
-  color: #ccc;
+  /*color: #ccc;*/
+  color: #fff;
 }
 .section-accent {
   color: #fff;

@@ -346,7 +346,7 @@
             error: function(response) {
               if (response.status === 422) {
                 $el.trigger( 'form-ajax-response', response );
-                $alert.html("Both name and email are required fields");
+                $alert.html("Name and email are required fields");
                 $alert.addClass( 'alert-danger' ).fadeIn( 500 );
                 $submit.button( 'reset' );
               }

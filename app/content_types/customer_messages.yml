@@ -21,6 +21,13 @@ fields:
     hint: Customer contact email from form
     localized: false
 
+- company: # Name of the field
+    label: Company
+    type: string
+    required: false
+    hint: Customer company from form
+    localized: false
+
 - message: # Name of the field
     label: Message
     type: text
