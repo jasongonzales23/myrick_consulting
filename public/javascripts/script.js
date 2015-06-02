@@ -144,11 +144,12 @@
      * =======================================
      */
     if ( $.fn.responsiveSlides ) {
+      var testimonialSlider = $('.testimonial-slider');
       $body.on( 'pageStart', function() {
         $( '.testimonial-slider' ).responsiveSlides({
-          speed : $( this ).data( 'speed' ) ? $( this ).data( 'speed' ) : 800,
-          timeout : $( this ).data( 'timeout' ) ? $( this ).data( 'timeout' ) : 4000,
-          auto : $( this ).data( 'auto' ) ? $( this ).data( 'auto' ) : false,
+          speed : testimonialSlider.data( 'speed' ) ? $( this ).data( 'speed' ) : 800,
+          timeout : testimonialSlider.data( 'timeout' ) ? $( this ).data( 'timeout' ) : 4000,
+          auto : testimonialSlider.data( 'auto' ) ? $( this ).data( 'auto' ) : false,
           pager : true,
         });
       });
