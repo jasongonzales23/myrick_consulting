@@ -148,7 +148,7 @@
       $body.on( 'pageStart', function() {
         $( '.testimonial-slider' ).responsiveSlides({
           speed : testimonialSlider.data( 'speed' ) ? $( this ).data( 'speed' ) : 800,
-          timeout : testimonialSlider.data( 'timeout' ) ? $( this ).data( 'timeout' ) : 4000,
+          timeout : testimonialSlider.data( 'timeout' ) ? $( this ).data( 'timeout' ) : 7000,
           auto : testimonialSlider.data( 'auto' ) ? $( this ).data( 'auto' ) : false,
           pager : true,
         });
